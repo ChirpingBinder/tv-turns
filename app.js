@@ -140,11 +140,12 @@ async function calculateTurns() {
         turn.className = "turn";
 
         turn.innerHTML = `
-            <div class="turn-number">Kid ${i + 1}</div>
-            <div class="turn-time">
-                ${minutesToTime(turnStart)} – ${minutesToTime(turnEnd)}
-            </div>
-        `;
+    <div class="turn-number">Kid ${i + 1}</div>
+    <div class="turn-time">
+        ${minutesToTime(turnStart)} – ${minutesToTime(turnEnd)}
+    </div>
+    <div class="turn-length">${turnLength} min</div>
+`;
 
         turnList.appendChild(turn);
 
@@ -161,8 +162,8 @@ async function calculateTurns() {
 }
 
 function reset() {
-    startTimeInput.value = "19:00";
-    endTimeInput.value = "21:00";
+    startTimeInput.value = "6:31";
+    endTimeInput.value = "7:45";
     kidsInput.value = "3";
 
     results.classList.add("hidden");
