@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#ffffff">
+    <title>TV Turns</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="app">
+
+        <header class="header">
+            <h1>TV Turns</h1>
+            <p>Split your TV time automatically.</p>
+        </header>
+
+        <section class="card">
+
+            <div class="field">
+                <label for="startTime">TV starts</label>
+                <input type="time" id="startTime" value="19:00">
+            </div>
+
+            <div class="field">
+                <label for="endTime">TV ends</label>
+                <input type="time" id="endTime" value="21:00">
+            </div>
+
+            <div class="field">
+                <label for="kids">Number of kids</label>
+                <select id="kids">
+                    <option value="2">2 kids</option>
+                    <option value="3" selected>3 kids</option>
+                    <option value="4">4 kids</option>
+                    <option value="5">5 kids</option>
+                </select>
+            </div>
+
+            <button id="calculateButton">Calculate Turns</button>
+
+        </section>
+
+        <section id="results" class="results hidden">
+
+            <div class="results-header">
+                <h2>TV Turns</h2>
+                <button id="resetButton" class="reset-button">Reset</button>
+            </div>
+
+            <div id="turnList"></div>
+
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
