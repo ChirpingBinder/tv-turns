@@ -5,47 +5,46 @@
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    background: #eef5ff;
+    background: #f4f5f7;
     color: #1f2937;
 }
 
 .app {
     width: 100%;
-    max-width: 540px;
+    max-width: 520px;
     margin: 0 auto;
-    padding: 16px 16px 24px;
+    padding: 14px 14px 20px;
 }
 
 .header {
     text-align: center;
-    margin-bottom: 14px;
+    margin-bottom: 12px;
 }
 
 .header h1 {
     margin: 0;
-    font-size: 35px;
+    font-size: 32px;
     font-weight: 700;
-    color: #2563eb;
 }
 
 .header p {
-    margin: 4px 0 0;
-    color: #64748b;
-    font-size: 16px;
+    margin: 3px 0 0;
+    color: #6b7280;
+    font-size: 15px;
 }
 
 .card {
     background: white;
-    border-radius: 15px;
-    padding: 14px;
-    box-shadow: 0 2px 10px rgba(37, 99, 235, 0.10);
+    border-radius: 14px;
+    padding: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
 }
 
 .fields-row {
     display: grid;
     grid-template-columns: 1fr 1fr 0.75fr;
-    gap: 10px;
-    margin-bottom: 14px;
+    gap: 9px;
+    margin-bottom: 12px;
 }
 
 .fields-row .field {
@@ -58,117 +57,88 @@ body {
 
 label {
     display: block;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
-    margin-bottom: 5px;
-    color: #475569;
+    margin-bottom: 4px;
 }
 
 input,
 select {
     width: 100%;
-    height: 48px;
-    border: 1px solid #cbd5e1;
-    border-radius: 10px;
+    height: 44px;
+    border: 1px solid #d1d5db;
+    border-radius: 9px;
     background: white;
-    padding: 0 10px;
-    font-size: 18px;
+    padding: 0 9px;
+    font-size: 17px;
     color: #111827;
-}
-
-input:focus,
-select:focus {
-    outline: none;
-    border-color: #3b82f6;
-    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
 }
 
 .card > button {
     display: block;
-    width: 78%;
-    max-width: 340px;
-    height: 52px;
+    width: 75%;
+    max-width: 320px;
+    height: 48px;
     margin: 0 auto;
     border: none;
-    border-radius: 11px;
-    background: #2563eb;
+    border-radius: 10px;
+    background: #111827;
     color: white;
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 600;
     cursor: pointer;
-    box-shadow: 0 3px 7px rgba(37, 99, 235, 0.25);
 }
 
-.card > button:active {
+button:active {
     transform: scale(0.98);
-    background: #1d4ed8;
 }
 
 .results {
-    margin-top: 16px;
+    margin-top: 14px;
 }
 
 .results-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 9px;
+    margin-bottom: 8px;
 }
 
 .results-header h2 {
     margin: 0;
-    font-size: 24px;
-    color: #1e40af;
+    font-size: 22px;
 }
 
 .reset-button {
     width: auto;
     height: auto;
     background: transparent;
-    color: #64748b;
-    font-size: 16px;
+    color: #6b7280;
+    font-size: 15px;
     padding: 4px 6px;
-    box-shadow: none;
 }
 
 .turn {
     background: white;
-    border-radius: 13px;
-    padding: 14px 16px;
-    margin-bottom: 9px;
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
+    border-radius: 12px;
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-left: 6px solid #3b82f6;
-}
-
-.turn:nth-child(2) {
-    border-left-color: #10b981;
-}
-
-.turn:nth-child(3) {
-    border-left-color: #f59e0b;
-}
-
-.turn:nth-child(4) {
-    border-left-color: #8b5cf6;
-}
-
-.turn:nth-child(5) {
-    border-left-color: #ef4444;
 }
 
 .turn-number {
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 700;
-    color: #475569;
-    min-width: 65px;
+    color: #6b7280;
+    min-width: 60px;
 }
 
 .turn-time {
     margin-top: 0;
-    font-size: 23px;
+    font-size: 21px;
     font-weight: 700;
     flex: 1;
     text-align: center;
@@ -176,10 +146,10 @@ select:focus {
 
 .turn-length {
     margin-top: 0;
-    color: #64748b;
-    font-size: 17px;
+    color: #6b7280;
+    font-size: 16px;
     font-weight: 600;
-    min-width: 55px;
+    min-width: 52px;
     text-align: right;
 }
 
