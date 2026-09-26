@@ -1,6 +1,5 @@
 const SUPABASE_URL = "https://fupgxfeumsubvxpnmvli.supabase.co/rest/v1/";
 const SUPABASE_KEY = "sb_publishable_YWiBhQ9Tcu6pPjpDoVJufQ_MQLVKNfR";
-console.log("TV Turns: Supabase connection configured");
 
 const startTimeInput = document.getElementById("startTime");
 const endTimeInput = document.getElementById("endTime");
@@ -9,6 +8,8 @@ const calculateButton = document.getElementById("calculateButton");
 const resetButton = document.getElementById("resetButton");
 const results = document.getElementById("results");
 const turnList = document.getElementById("turnList");
+
+let rotationPosition = 0;
 
 async function loadSettings() {
     try {
@@ -32,6 +33,7 @@ async function loadSettings() {
             startTimeInput.value = data[0].start_time.slice(0, 5);
             endTimeInput.value = data[0].end_time.slice(0, 5);
             kidsInput.value = data[0].kids;
+            rotationPosition = data[0].rotation_position || 0;
         }
     } catch (error) {
         console.error("Supabase load error:", error);
@@ -54,6 +56,7 @@ async function saveSettings() {
                     kids: Number(kidsInput.value),
                     start_time: `${startTimeInput.value}:00`,
                     end_time: `${endTimeInput.value}:00`,
+                    rotation_position: rotationPosition,
                     updated_at: new Date().toISOString()
                 })
             }
@@ -84,9 +87,22 @@ function minutesToTime(minutes) {
     return `${displayHour}:${String(mins).padStart(2, "0")} ${suffix}`;
 }
 
-async function calculateTurns() {
-    await saveSettings();
+function getExtraMinuteDistribution(kids, remainder, position) {
+    const extras = new Array(kids).fill(0);
 
+    if (remainder === 0) {
+        return extras;
+    }
+
+    for (let i = 0; i < remainder; i++) {
+        const kidIndex = (position + i) % kids;
+        extras[kidIndex] = 1;
+    }
+
+    return extras;
+}
+
+async function calculateTurns() {
     const start = timeToMinutes(startTimeInput.value);
     let end = timeToMinutes(endTimeInput.value);
     const kids = Number(kidsInput.value);
@@ -105,12 +121,18 @@ async function calculateTurns() {
     const baseMinutes = Math.floor(totalMinutes / kids);
     const remainder = totalMinutes % kids;
 
+    const extras = getExtraMinuteDistribution(
+        kids,
+        remainder,
+        rotationPosition
+    );
+
     let currentTime = start;
 
     turnList.innerHTML = "";
 
     for (let i = 0; i < kids; i++) {
-        const turnLength = baseMinutes + (i < remainder ? 1 : 0);
+        const turnLength = baseMinutes + extras[i];
         const turnStart = currentTime;
         const turnEnd = currentTime + turnLength;
 
@@ -128,6 +150,12 @@ async function calculateTurns() {
 
         currentTime = turnEnd;
     }
+
+    if (remainder > 0) {
+        rotationPosition = (rotationPosition + 1) % kids;
+    }
+
+    await saveSettings();
 
     results.classList.remove("hidden");
 }
