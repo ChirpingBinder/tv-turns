@@ -1,5 +1,6 @@
 const SUPABASE_URL = "https://fupgxfeumsubvxpnmvli.supabase.co/rest/v1/";
 const SUPABASE_KEY = "sb_publishable_YWiBhQ9Tcu6pPjpDoVJufQ_MQLVKNfR";
+console.log("TV Turns: Supabase connection configured");
 
 const startTimeInput = document.getElementById("startTime");
 const endTimeInput = document.getElementById("endTime");
