@@ -13,38 +13,38 @@ body {
     width: 100%;
     max-width: 520px;
     margin: 0 auto;
-    padding: 12px 14px 20px;
+    padding: 14px 14px 20px;
 }
 
 .header {
     text-align: center;
-    margin-bottom: 9px;
+    margin-bottom: 12px;
 }
 
 .header h1 {
     margin: 0;
-    font-size: 29px;
+    font-size: 32px;
     font-weight: 700;
 }
 
 .header p {
-    margin: 1px 0 0;
+    margin: 3px 0 0;
     color: #6b7280;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .card {
     background: white;
-    border-radius: 12px;
-    padding: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    border-radius: 14px;
+    padding: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
 }
 
 .fields-row {
     display: grid;
-    grid-template-columns: 1fr 1fr 0.7fr;
-    gap: 7px;
-    margin-bottom: 8px;
+    grid-template-columns: 1fr 1fr 0.75fr;
+    gap: 9px;
+    margin-bottom: 12px;
 }
 
 .fields-row .field {
@@ -57,31 +57,34 @@ body {
 
 label {
     display: block;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 600;
-    margin-bottom: 2px;
+    margin-bottom: 4px;
 }
 
 input,
 select {
     width: 100%;
-    height: 38px;
+    height: 44px;
     border: 1px solid #d1d5db;
-    border-radius: 7px;
+    border-radius: 9px;
     background: white;
-    padding: 0 7px;
-    font-size: 16px;
+    padding: 0 9px;
+    font-size: 17px;
     color: #111827;
 }
 
-button {
-    width: 100%;
-    height: 42px;
+.card > button {
+    display: block;
+    width: 75%;
+    max-width: 320px;
+    height: 48px;
+    margin: 0 auto;
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     background: #111827;
     color: white;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 600;
     cursor: pointer;
 }
@@ -91,19 +94,19 @@ button:active {
 }
 
 .results {
-    margin-top: 11px;
+    margin-top: 14px;
 }
 
 .results-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 7px;
+    margin-bottom: 8px;
 }
 
 .results-header h2 {
     margin: 0;
-    font-size: 20px;
+    font-size: 22px;
 }
 
 .reset-button {
@@ -117,9 +120,9 @@ button:active {
 
 .turn {
     background: white;
-    border-radius: 11px;
-    padding: 11px 14px;
-    margin-bottom: 7px;
+    border-radius: 12px;
+    padding: 12px 15px;
+    margin-bottom: 8px;
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
     display: flex;
     align-items: center;
@@ -127,15 +130,15 @@ button:active {
 }
 
 .turn-number {
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 700;
     color: #6b7280;
-    min-width: 55px;
+    min-width: 60px;
 }
 
 .turn-time {
     margin-top: 0;
-    font-size: 19px;
+    font-size: 21px;
     font-weight: 700;
     flex: 1;
     text-align: center;
@@ -144,9 +147,9 @@ button:active {
 .turn-length {
     margin-top: 0;
     color: #6b7280;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 600;
-    min-width: 48px;
+    min-width: 52px;
     text-align: right;
 }
 
@@ -156,6 +159,6 @@ button:active {
 
 @media (min-width: 600px) {
     .app {
-        padding-top: 25px;
+        padding-top: 30px;
     }
 }
