@@ -162,8 +162,8 @@ async function calculateTurns() {
 }
 
 function reset() {
-    startTimeInput.value = "6:31";
-    endTimeInput.value = "7:45";
+    startTimeInput.value = "06:31";
+    endTimeInput.value = "07:45";
     kidsInput.value = "3";
 
     results.classList.add("hidden");
