@@ -105,19 +105,19 @@ select:focus {
 }
 
 .results {
-    margin-top: 16px;
+    margin-top: 14px;
 }
 
 .results-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 9px;
+    margin-bottom: 7px;
 }
 
 .results-header h2 {
     margin: 0;
-    font-size: 24px;
+    font-size: 22px;
     color: #1e40af;
 }
 
@@ -126,21 +126,21 @@ select:focus {
     height: auto;
     background: transparent;
     color: #64748b;
-    font-size: 16px;
+    font-size: 15px;
     padding: 4px 6px;
     box-shadow: none;
 }
 
 .turn {
     background: white;
-    border-radius: 13px;
-    padding: 14px 16px;
-    margin-bottom: 9px;
+    border-radius: 11px;
+    padding: 10px 13px;
+    margin-bottom: 6px;
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-left: 6px solid #3b82f6;
+    border-left: 5px solid #3b82f6;
 }
 
 .turn:nth-child(2) {
@@ -160,15 +160,15 @@ select:focus {
 }
 
 .turn-number {
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 700;
     color: #475569;
-    min-width: 65px;
+    min-width: 58px;
 }
 
 .turn-time {
     margin-top: 0;
-    font-size: 23px;
+    font-size: 20px;
     font-weight: 700;
     flex: 1;
     text-align: center;
@@ -177,9 +177,9 @@ select:focus {
 .turn-length {
     margin-top: 0;
     color: #64748b;
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 600;
-    min-width: 55px;
+    min-width: 50px;
     text-align: right;
 }
 
