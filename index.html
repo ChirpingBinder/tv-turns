@@ -19,25 +19,29 @@
 
         <section class="card">
 
-            <div class="field">
-                <label for="startTime">TV starts</label>
-                <input type="time" id="startTime" value="06:31">
-            </div>
+            <div class="fields-row">
 
-            <div class="field">
-                <label for="endTime">TV ends</label>
-                <input type="time" id="endTime" value="07:45">
-            </div>
+    <div class="field">
+        <label for="startTime">Starts</label>
+        <input type="time" id="startTime" value="06:31">
+    </div>
 
-            <div class="field">
-                <label for="kids">Number of kids</label>
-                <select id="kids">
-                    <option value="2">2 kids</option>
-                    <option value="3" selected>3 kids</option>
-                    <option value="4">4 kids</option>
-                    <option value="5">5 kids</option>
-                </select>
-            </div>
+    <div class="field">
+        <label for="endTime">Ends</label>
+        <input type="time" id="endTime" value="07:45">
+    </div>
+
+    <div class="field">
+        <label for="kids">Kids</label>
+        <select id="kids">
+            <option value="2">2</option>
+            <option value="3" selected>3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+    </div>
+
+</div>
 
             <button id="calculateButton">Calculate Turns</button>
 
