@@ -135,3 +135,9 @@ button:active {
         padding-top: 50px;
     }
 }
+.turn-length {
+    margin-top: 4px;
+    color: #6b7280;
+    font-size: 15px;
+    font-weight: 600;
+}
