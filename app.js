@@ -1,4 +1,4 @@
-const SUPABASE_URL = "https://fupgxfeumsubvxpnmvli.supabase.co/rest/v1/";
+const SUPABASE_URL = "https://fupgxfeumsubvxpnmvli.supabase.co";
 const SUPABASE_KEY = "sb_publishable_YWiBhQ9Tcu6pPjpDoVJufQ_MQLVKNfR";
 
 const startTimeInput = document.getElementById("startTime");
